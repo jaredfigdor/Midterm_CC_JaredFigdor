@@ -84,13 +84,13 @@ function draw() {
   if (t > 1400 && t < 2500){//using time variable to say when to show a certain object
     j.updat();
   }
-  if(t > 4100){//using time variable to say when to show a certain object
+  if(t > 4000){//using time variable to say when to show a certain object
     v.updat();
     qwe.updat();
   }
 
 
-  if (t > 2500 && t <3400){//using time variable to say when to show a certain object
+  if (t > 2500 && t <3750){//using time variable to say when to show a certain object
     timeb +=2
     rectangle();
   }
@@ -262,7 +262,7 @@ function rectangle(){ //creating a function for the pulsing and duplicating rect
 
 function calcWave() {
  
-  th += 0.03;
+  th += 0.2;
   
   time += 2;
   if (time > 1880){ //using time to change my amplitude over time
@@ -359,7 +359,7 @@ function calcWave() {
       }
       pop();
       if (mouseIsPressed == true){//slowing the rotation if mouse is pressed
-        gen += 0.0006;
+        gen += 0.006;
 
       }else{
         gen += 0.001
@@ -380,10 +380,10 @@ function calcWave() {
       rotate(gen*2);
       for(let i = 0; i < 250; i+= 1){
         rotate(6 / gen*44);
-        stroke(140,18,18,20);
+        stroke(255,233,244,60);
         strokeWeight(3);
         noFill();
-        curve(i, i, 0, ang+i, this.h, ang-i, i+this.h, i);
+        line(i, i, 0, ang+i, this.h, ang-i, i+this.h, i);
       }
       pop();
       if (mouseIsPressed == true){
